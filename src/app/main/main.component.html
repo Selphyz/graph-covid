@@ -1,0 +1,48 @@
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
+    <h1 class="h2">Dashboard</h1>
+    <form action="">
+        <div class="form-row d-flex-justify-content-beetween">
+            <div class="col-md-4">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <i-feather name="calendar"></i-feather>
+                        </div>
+                        <input type="text" class="input-fecha" placeholder="desde" bsDatepicker
+                            [bsConfig]="{ iAnimated: true }">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <i-feather name="calendar"></i-feather>
+                        </div>
+                        <input type="text" class="input-fecha" placeholder="hasta" bsDatepicker
+                            [bsConfig]="{ iAnimated: true }">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <i-feather name="calendar"></i-feather>
+                        </div>
+                        <select class="form-control">
+                            <option value="">España</option>
+                            <option value="">Francia</option>
+                            <option value="">Alemania</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="chart-wrapper">
+    <canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions"
+        [colors]="lineChartColors" [legend]="lineChartLegend" [chartType]="lineChartType" [plugins]="lineChartPlugins">
+    </canvas>
+</div>

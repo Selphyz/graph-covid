@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'covid-stats';
+  // icons = [
+  //   {name: 'file'},
+  //   {name: 'filetext'},
+  //   {name: 'shoppingcart'},
+  //   {name: 'barchart2'},
+  //   {name: 'layers'},
+  //   {name: 'users'},
+  //   {name: 'pluscircle'},
+  //   {name: 'calendar'}
+  // ]
 }

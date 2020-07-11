@@ -50,9 +50,15 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/font-awesome/scss/font-awesome.scss",
+              "node_modules/bootstrap/scss/bootstrap.scss",
+              "node_modules/ngx-bootstrap/datepicker/bs-datepicker.scss",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.js",
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -145,6 +151,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "covid-stats"
+    }
+  },
+  "defaultProject": "covid-stats",
+  "cli": {
+    "analytics": "9baff153-1ebf-49b0-883b-9cd6b6fe4088"
+  }
 }
