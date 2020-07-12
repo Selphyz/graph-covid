@@ -1,5 +1,5 @@
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
-    <h1 class="h2">Dashboard</h1>
+    <h1 class="h2">{{country}}</h1>
     <form action="">
         <div class="form-row d-flex-justify-content-beetween">
             <div class="col-md-4">
@@ -8,8 +8,10 @@
                         <div class="input-group-text">
                             <i-feather name="calendar"></i-feather>
                         </div>
-                        <input type="text" class="input-fecha" placeholder="desde" bsDatepicker
-                            [bsConfig]="{ iAnimated: true }">
+                        <input type="text" class="input-fecha" placeholder="desde" bsDatepicker name="dateInit"
+                            [bsConfig]="{ iAnimated: true }" [minDate]="minCovDate"
+                            [maxDate]="dateEnd ? dateEnd : maxCovDate" [(ngModel)]="dateInit"
+                            (bsValueChange)="loadData($event)">
                     </div>
                 </div>
             </div>
@@ -19,8 +21,10 @@
                         <div class="input-group-text">
                             <i-feather name="calendar"></i-feather>
                         </div>
-                        <input type="text" class="input-fecha" placeholder="hasta" bsDatepicker
-                            [bsConfig]="{ iAnimated: true }">
+                        <input type="text" class="input-fecha" placeholder="hasta" bsDatepicker name="dateEnd"
+                            [bsConfig]="{ iAnimated: true }" [minDate]="minCovDate"
+                            [maxDate]="dateEnd ? dateEnd : maxCovDate" [(ngModel)]="dateEnd"
+                            (bsValueChange)="loadData($event)">
                     </div>
                 </div>
             </div>
@@ -28,12 +32,11 @@
                 <div class="input-group">
                     <div class="input-group-prepend">
                         <div class="input-group-text">
-                            <i-feather name="calendar"></i-feather>
+                            <i-feather name="globe"></i-feather>
                         </div>
-                        <select class="form-control">
-                            <option value="">España</option>
-                            <option value="">Francia</option>
-                            <option value="">Alemania</option>
+                        <select class="form-control" name="country" [(ngModel)]="country" (change)="loadData($event)">
+                            <option [ngValue]="null" selected>Elige</option>
+                            <option *ngFor="let country of countries" [ngValue]="country">{{country}}</option>
                         </select>
                     </div>
                 </div>

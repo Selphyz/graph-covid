@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { FeatherModule } from 'angular-feather';
-import { File, FileText, ShoppingCart, BarChart2, Layers, 
-    Users, PlusCircle, Calendar, Zap } from 'angular-feather/icons';
+import {
+    File, FileText, ShoppingCart, BarChart2, Layers,
+    Users, PlusCircle, Calendar, Zap, Globe
+} from 'angular-feather/icons';
 
 const icons = {
     File,
@@ -12,7 +14,8 @@ const icons = {
     Users,
     PlusCircle,
     Calendar,
-    Zap
+    Zap,
+    Globe
 };
 
 @NgModule({
