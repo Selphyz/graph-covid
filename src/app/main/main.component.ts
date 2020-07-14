@@ -73,7 +73,6 @@ export class MainComponent implements OnInit {
     this.covidService.getAll().subscribe(
       data => {
         this.countries = Object.keys(data);
-        // console.log(this.countries);
       }
     );
   }

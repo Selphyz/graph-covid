@@ -1,4 +1,4 @@
-<div>
+<div class="col-md-6">
     <div class="card">
         <div class="card-header">
             <div class="input-group">
@@ -6,17 +6,17 @@
                     <div class="input-group-text">
                         <i-feather name="calendar"></i-feather>
                     </div>
-                    <select class="form-control">
-                        <option value="">España</option>
-                        <option value="">Francia</option>
-                        <option value="">Alemania</option>
+                    <select class="form-control" name="country" [(ngModel)]="country" (change)="loadData($event)">
+                        <option [ngValue]="null" selected>Elige</option>
+                        <option *ngFor="let country of countries" [ngValue]="country">{{country}}</option>
                     </select>
                 </div>
             </div>
         </div>
         <div class="card-body">
             <canvas baseChart [data]="pieChartData" [labels]="pieChartLabels" [chartType]="pieChartType"
-                [options]="pieChartOptions" [plugins]="pieChartPlugins" [legend]="pieChartLegend">
+                [options]="pieChartOptions" [plugins]="pieChartPlugins" [legend]="pieChartLegend"
+                [colors]="pieChartColors">
             </canvas>
         </div>
     </div>

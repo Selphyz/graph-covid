@@ -1,22 +1,41 @@
-<div>
+<div class="col-md-6">
     <div class="card">
         <div class="card-header">
-            <div class="input-group">
-                <div class="input-group-prepend">
-                    <div class="input-group-text">
-                        <i-feather name="calendar"></i-feather>
+            <div class="form-row d-flex justify-content-between">
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <i-feather name="calendar"></i-feather>
+                            </div>
+                            <select class="form-control" name="country1" [(ngModel)]="country1"
+                                (change)="loadData($event)">
+                                <option [ngValue]="null" selected>Pais 1</option>
+                                <option *ngFor="let country of countries" [ngValue]="country">{{country}}</option>
+                            </select>
+                        </div>
                     </div>
-                    <select class="form-control">
-                        <option value="">España</option>
-                        <option value="">Francia</option>
-                        <option value="">Alemania</option>
-                    </select>
+                </div>
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <i-feather name="calendar"></i-feather>
+                            </div>
+                            <select class="form-control" name="country2" [(ngModel)]="country2"
+                                (change)="loadData($event)">
+                                <option [ngValue]="null" selected>Pais 2</option>
+                                <option *ngFor="let country of countries" [ngValue]="country">{{country}}</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="card-body">
             <canvas baseChart [data]="donutChartData" [labels]="donutChartLabels" [chartType]="donutChartType"
-                [options]="donutChartOptions" [plugins]="donutChartPlugins" [legend]="donutChartLegend">
+                [options]="donutChartOptions" [plugins]="donutChartPlugins" [legend]="donutChartLegend"
+                [colors]="donutChartColors">
             </canvas>
         </div>
     </div>

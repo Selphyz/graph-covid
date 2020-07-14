@@ -8,6 +8,7 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { defineLocale } from 'ngx-bootstrap/chronos';
 import { esLocale } from 'ngx-bootstrap/locale';
 import { ChartsModule } from 'ng2-charts';
+import { DatePipe } from '@angular/common';
 defineLocale('es', esLocale);
 
 import { AppRoutingModule } from './app-routing.module';
@@ -18,9 +19,7 @@ import { MainComponent } from './main/main.component';
 import { GraficosComponent } from './graphs/graphs.component';
 import { FooterComponent } from './footer/footer.component';
 import { PieComponent } from './graphs/pie/pie.component';
-import { BarsComponent } from './graphs/bars/bars.component';
 import { DonutComponent } from './graphs/donut/donut.component';
-import { DatePipe } from '@angular/common';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +29,6 @@ import { DatePipe } from '@angular/common';
     GraficosComponent,
     FooterComponent,
     PieComponent,
-    BarsComponent,
     DonutComponent
   ],
   imports: [
