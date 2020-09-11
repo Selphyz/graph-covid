@@ -1,6 +1,6 @@
 # Link del despliegue en netlify
 
-https://serene-euler-5704a3.netlify.app/
+https://covid-angular.netlify.app/
 
 # CovidStats
 
